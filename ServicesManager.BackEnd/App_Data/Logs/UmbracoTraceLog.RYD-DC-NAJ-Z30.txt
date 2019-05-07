@@ -3590,3 +3590,18 @@ _shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needF
    at System.Threading.ThreadPoolWorkQueue.Dispatch()
    at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
  2019-05-07 13:59:21,913 [P6584/D26/T32] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: admin@umbraco.com, IP Address: ::1
+ 2019-05-07 14:01:16,195 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-07 14:01:16,195 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-07 14:01:16,195 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2019-05-07 14:01:16,197 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 1ms)
+ 2019-05-07 14:01:16,307 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-07 14:01:16,308 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-07 14:01:16,308 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2019-05-07 14:01:16,309 [P6584/D26/T24] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 1ms)
+ 2019-05-07 14:01:45,166 [P6584/D26/T59] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-07 14:01:45,167 [P6584/D26/T59] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-07 14:01:45,169 [P6584/D26/T59] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2019-05-07 14:01:45,174 [P6584/D26/T59] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 5ms)
+ 2019-05-07 14:02:15,411 [P6584/D26/T77] INFO  umbraco.content - Load Xml from file...
+ 2019-05-07 14:02:15,413 [P6584/D26/T77] INFO  umbraco.content - Loaded Xml from file.
+ 2019-05-07 14:02:15,423 [P6584/D26/T35] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2019-05-06 14:02:15

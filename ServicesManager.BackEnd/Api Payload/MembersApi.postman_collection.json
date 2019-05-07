@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "a1dd89a1-b05b-4fec-ab61-770a7e476cd6",
+		"name": "MembersApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:53506/umbraco/api/MembersApi/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"FullName\":\"ibrahim Muhammad Jwadat Nada\",\"PhoneNumber\":\"078889797979\",\"Address\":\"amman - Jordan -meccas Street\",\"Sex\":\"Male\",\"Email\":\"ibrrahim.nada@gmail.com\",\"Password\":\"824255ABCD\",\"MemberTypeAlias\":\"serviceConsumerUser\"}"
+				},
+				"url": {
+					"raw": "localhost:53506/umbraco/api/MembersApi/add",
+					"host": [
+						"localhost"
+					],
+					"port": "53506",
+					"path": [
+						"umbraco",
+						"api",
+						"MembersApi",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:53506/umbraco/api/MembersApi/Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Username\":\"ibrrahim.nada@gmail.com\",\n\"Password\":\"abdc824255\"}"
+				},
+				"url": {
+					"raw": "localhost:53506/umbraco/api/MembersApi/Authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "53506",
+					"path": [
+						"umbraco",
+						"api",
+						"MembersApi",
+						"Authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:53506/umbraco/api/MembersApi/UpdatePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"1057\",\"FullName\":\"ibrahim Muhammad Jwadat Nada\",\"PhoneNumber\":\"078889797979\",\"Address\":\"amman - Jordan -meccas Street\",\"Sex\":\"Male\",\"Email\":\"ibrrahim.nada@gmail.com\",\"Password\":\"abdc824255\",\"MemberTypeAlias\":\"serviceConsumerUser\"}"
+				},
+				"url": {
+					"raw": "localhost:53506/umbraco/api/MembersApi/UpdateEmail",
+					"host": [
+						"localhost"
+					],
+					"port": "53506",
+					"path": [
+						"umbraco",
+						"api",
+						"MembersApi",
+						"UpdateEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:53506/umbraco/api/MembersApi/UpdatePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"1057\",\"FullName\":\"ibrahim Muhammad Jwadat Nada\",\"PhoneNumber\":\"078889797979\",\"Address\":\"amman - Jordan -meccas Street\",\"Sex\":\"Male\",\"Email\":\"ibrrahim.nada@gmail.com\",\"Password\":\"abdc824255\",\"MemberTypeAlias\":\"serviceConsumerUser\"}"
+				},
+				"url": {
+					"raw": "localhost:53506/umbraco/api/MembersApi/UpdatePassword",
+					"host": [
+						"localhost"
+					],
+					"port": "53506",
+					"path": [
+						"umbraco",
+						"api",
+						"MembersApi",
+						"UpdatePassword"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
