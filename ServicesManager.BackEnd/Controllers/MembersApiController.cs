@@ -35,7 +35,18 @@ namespace ServicesManager.BackEnd.Controllers
             newMember.SetValue("sex", addMemberDto.Sex);
             _memberService.Save(newMember);
             _memberService.SavePassword(newMember, addMemberDto.Password);
-            return Ok(new {error_code= 0, desc = addMemberDto});
+            var currentMember = _memberService.GetByUsername(newMember.Username);
+            var memberDto = new AddMemberDto()
+            {
+                FullName = currentMember.GetValue<string>("fullName"),
+                Address = currentMember.GetValue<string>("address"),
+                Email = currentMember.Email,
+                MemberTypeAlias = currentMember.ContentTypeAlias,
+                PhoneNumber = currentMember.GetValue<string>("phoneNumber"),
+                Sex = currentMember.GetValue<string>("sex"),
+                Id = currentMember.Id.ToString()
+            };
+            return Ok(new { error_code = 0, desc = memberDto });
         }
 
         [HttpPost]
