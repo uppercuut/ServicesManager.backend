@@ -280,8 +280,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MembersApiController.cs" />
+    <Compile Include="Controllers\ServicesApiController.cs" />
+    <Compile Include="Models\MainCategories.cs" />
     <Compile Include="Models\Members\AddMemberDto.cs" />
+    <Compile Include="Models\Members\MemberResponse.cs" />
     <Compile Include="Models\Members\UserauthenticationDto.cs" />
+    <Compile Include="Models\ServiceDto.cs" />
+    <Compile Include="Models\serviceResponseDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +312,9 @@
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
+    <Content Include="Api Payload\MembersApi.postman_collection.json" />
+    <Content Include="DataBases\Adding comsumerMember\ServicesManagerV2" />
+    <Content Include="DataBases\EmptyDataBaseDB" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -319,6 +327,7 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
