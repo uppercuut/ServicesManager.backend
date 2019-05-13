@@ -52,6 +52,7 @@ namespace ServicesManager.BackEnd.Controllers
                 Desc = x.GetPropertyValue<string>("description"),
                 Name = x.GetPropertyValue<string>("serviceName"),
                 phoneNumber = x.GetPropertyValue<string>("phoneNumber"),
+                UserId = x.GetPropertyValue<string>("userId"),
                 image = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority +
    HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/" + Umbraco.Media(Umbraco.Field(x, "image").ToString()).Url
             });
@@ -71,6 +72,8 @@ namespace ServicesManager.BackEnd.Controllers
             newNode.SetValue("createdBy", serviceDto.FullName);
             newNode.SetValue("description", serviceDto.Desc);
             newNode.SetValue("phoneNumber", serviceDto.phoneNumber);
+            newNode.SetValue("userId", serviceDto.UserId);
+            
             //************** END Saving user info ********************
 
             //saving the pubshing into umbraco content 
@@ -110,5 +113,17 @@ namespace ServicesManager.BackEnd.Controllers
             return Ok(serviceresponsedto);
         }
 
+       
+        public IHttpActionResult DeleteService(int id)
+        {
+            var serviceresponsedto = new List<serviceResponseDto>();
+
+           
+
+            Services.ContentService.Delete(Services.ContentService.GetById(id));
+
+
+            return Ok(serviceresponsedto);
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace ServicesManager.BackEnd.Models
         public string image { get; set; }
         public string FullName { get; set; }
         public string phoneNumber { get; set; }
+        public string UserId { get; set; }
     }
 }

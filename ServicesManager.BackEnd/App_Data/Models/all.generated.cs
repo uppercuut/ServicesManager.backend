@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b624a38e2c889adb")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5cb271839db9b64c")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -187,6 +187,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string ServiceName
 		{
 			get { return this.GetPropertyValue<string>("serviceName"); }
+		}
+
+		///<summary>
+		/// userId
+		///</summary>
+		[ImplementPropertyType("userId")]
+		public string UserId
+		{
+			get { return this.GetPropertyValue<string>("userId"); }
 		}
 	}
 
