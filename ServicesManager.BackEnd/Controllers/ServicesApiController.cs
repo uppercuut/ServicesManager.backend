@@ -56,8 +56,36 @@ namespace ServicesManager.BackEnd.Controllers
                 image = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority +
    HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/" + Umbraco.Media(Umbraco.Field(x, "image").ToString()).Url
             });
+
             return Ok(mappedJobs);
+
         }
+
+        public IHttpActionResult GetCountByUserID(string userID)
+        {
+            UmbracoHelper _umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+            // Get all Jobs from the Umbraco tree 
+            var categories = _umbracoHelper.TypedContentAtXPath("//" + "service");
+            // Map the found nodes from IPublishedContent to a strongly typed object of type Job (defined below)
+
+            var mappedJobs = categories.Select(x => new serviceResponseDto()
+            {
+                Id = x.Id,
+                FullName = x.GetPropertyValue<string>("createdBy"),
+                Desc = x.GetPropertyValue<string>("description"),
+                Name = x.GetPropertyValue<string>("serviceName"),
+                phoneNumber = x.GetPropertyValue<string>("phoneNumber"),
+                UserId = x.GetPropertyValue<string>("userId"),
+                image = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority +
+   HttpContext.Current.Request.ApplicationPath.TrimEnd('/') + "/" + Umbraco.Media(Umbraco.Field(x, "image").ToString()).Url
+            });
+
+            var xx = mappedJobs.Select(x => x.UserId == userID).Count();
+
+            return Ok(xx);
+        }
+
+
         public IHttpActionResult AddService(ServiceDto serviceDto)
         {
             var newNode = Services.ContentService.CreateContent(serviceDto.Name, serviceDto.ParentID, "service");
@@ -80,6 +108,9 @@ namespace ServicesManager.BackEnd.Controllers
             Services.ContentService.SaveAndPublishWithStatus(newNode);
             return Ok(serviceDto);
         }
+
+
+
         public static string GeMimeTypeFromImageByteArray(byte[] byteArray)
         {
             using (MemoryStream stream = new MemoryStream(byteArray))
@@ -89,6 +120,9 @@ namespace ServicesManager.BackEnd.Controllers
 
             }
         }
+
+
+
         public IHttpActionResult GetServiceByCategory(int id)
         {
 
